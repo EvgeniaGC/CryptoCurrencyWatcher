@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <title>Currency list</title>
+</head>
+<body>
+<h2>Available currency:</h2>
+<p><a href="/showAllCur">Show all currency</a></p>
+
+<div th:switch="${currencies}">
+    <table>
+        <thead>
+        <tr>
+            <th>Symbol</th>
+            <th>Name</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="currency : ${currencies}">
+            <td th:text="${currency.symbol}"></td>
+            <td th:text="${currency.name}"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>
+
+
