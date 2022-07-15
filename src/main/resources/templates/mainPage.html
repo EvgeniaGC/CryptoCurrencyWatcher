@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Main Page</title>
+</head>
+<body>
+<h2 th:text="'Hello, ' + (${user.name}==null? 'Guest':(*{user.name}))"></h2>
+<p>_____________________________________________________________________</p>
+
+<h3>Enter 'id' of currency: </h3>
+<form action="#" th:object="${user}" method="post" th:action="@{/login}" >
+    <div>
+        <div>
+            <label for="id">Enter 'id' of currency:</label>
+            <input type="text" th:field="*{id}" id="id" >
+            <span th:if="${#fields.hasErrors('id')}" th:errors="*{id}"></span>
+        </div>
+    </div>
+    <div>
+        <div>
+            <input type="submit" value="Show">
+        </div>
+    </div>
+</form>
+
+</body>
+</html>
