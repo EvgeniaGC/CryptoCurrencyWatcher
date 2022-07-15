@@ -16,17 +16,13 @@ Enter:
 ---
 URL database:
 ``` 
-https://www.phpmyadmin.co/index.php
-```
-Server:
-```
-sql11.freesqldatabase.com
+http://127.0.0.1/openserver/phpmyadmin
 ```
 Username:
 ```
-sql11506112
+root
 ```
 Password:
 ```
-35G8yFiqRW
+
 ```

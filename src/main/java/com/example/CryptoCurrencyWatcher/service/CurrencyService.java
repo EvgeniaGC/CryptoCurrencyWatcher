@@ -10,8 +10,10 @@ public interface CurrencyService {
 
     Currency getCurrencyBySymbol(String symbol);
 
-    void saveCurrency(String symbolId);
+    Currency saveCurrency(Integer idCur);
 
-    List<Currency> getAllCurrencyList();
+    public Currency getCurById(Integer id);
+
+    List<Currency> getAllFirst10Currency ();
 
 }
